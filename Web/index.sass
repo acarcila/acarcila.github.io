@@ -1,0 +1,78 @@
+html
+    cursor: url(Cursor.svg) 50 50, auto
+    // cursor: none
+
+    
+body
+    background-color: blue
+    margin: 0
+
+.cursor
+    position: absolute
+    pointer-events: none
+    z-index: 1px
+    width: 14px
+    height: 14px
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    background-color: red
+    border-style: none
+    
+.section-all 
+    display: flex
+    flex-direction: column
+
+.div-nombre
+    position: fixed
+    top: 0
+    right: 0
+    display: flex
+    justify-content: flex-end
+    margin-top: 10px
+    margin-right: 8px
+
+    h1
+        right: 0px
+        padding-right: 10px
+
+    h1::before
+        content: 'A'
+        color: white
+
+.section-menu-lateral
+    padding-left: 60px
+    padding-top: 130px
+    position: fixed
+
+    .boton-lateral    
+        position: relative
+        padding: 8px
+        overflow: hidden
+        z-index: 2px
+
+        p
+            margin: 0
+            color: black
+            position: relative
+
+    .boton-lateral::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 50%
+        top: 50%
+        left: 100%
+        background-color: red
+        transform: translate(-50%, -50%)
+        border-radius: 50%
+        transition: 1s
+
+    .boton-lateral:hover
+        cursor: none
+
+    .boton-lateral:hover:before
+        width: 250%
+        height: 250%
+
+.section-contenido
+    padding-left: 260px
