@@ -137,10 +137,6 @@ body {
           align-items: center;
 }
 
-.section-informacion-personal .span-nombre {
-  width: 40%;
-}
-
 .div-informacion-personal {
   display: -ms-grid;
   display: grid;
