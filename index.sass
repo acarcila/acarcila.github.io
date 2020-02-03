@@ -76,9 +76,36 @@ body
 
 .section-contenido
     padding-left: 260px
+    padding-right: 180px
     display: flex
     flex-direction: column
     flex-wrap: wrap
+    align-content: center
+    justify-content: center
 
     section
         height: 100vh
+
+.section-informacion-personal
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .span-nombre
+        width: 40%
+
+.div-informacion-personal
+    display: grid
+    grid-template-columns: 200px 150px
+
+    .span-grid-titulo
+        color: red
+
+    .span-grid
+        color: green
+
+    .span-lugar-nacimiento
+        grid-column: 1 / span 2 
+
