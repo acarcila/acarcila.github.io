@@ -99,7 +99,6 @@ body {
 
 .section-contenido {
   padding-left: 260px;
-  padding-right: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +117,22 @@ body {
 
 .section-contenido section {
   height: 100vh;
+}
+
+.section-inicio .div-saludo {
+  width: 480px;
+  -webkit-transform: translate(90%, 250%);
+          transform: translate(90%, 250%);
+  font-size: 20px;
+}
+
+.section-inicio .h1-nombre {
+  margin: 0;
+  width: 400px;
+  color: white;
+  font-size: 120px;
+  -webkit-transform: translate(0%, 120%);
+          transform: translate(0%, 120%);
 }
 
 .section-informacion-personal {
