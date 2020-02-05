@@ -1,23 +1,14 @@
 html {
   cursor: url(Cursor.svg) 50 50, auto;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
 }
 
 body {
   background-color: blue;
   margin: 0;
-}
-
-.cursor {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1px;
-  width: 14px;
-  height: 14px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: red;
-  border-style: none;
 }
 
 .section-all {
@@ -117,6 +108,7 @@ body {
 
 .section-contenido section {
   height: 100vh;
+  scroll-snap-align: start;
 }
 
 .section-inicio .div-saludo {
