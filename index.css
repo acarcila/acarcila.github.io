@@ -171,7 +171,7 @@ body {
           align-items: center;
 }
 
-.o-section-informacion-personal .o-div-card {
+.o-section-informacion-personal .o-div-card-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,27 +186,27 @@ body {
   font-weight: 100;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-informacion-personal {
+.o-section-informacion-personal .o-div-card-info .o-div-informacion-personal {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 15rem 25rem;
       grid-template-columns: 15rem 25rem;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-grid-titulo {
+.o-section-informacion-personal .o-div-card-info .o-div-informacion-personal .o-span-grid-titulo {
   padding-bottom: 3rem;
   font-size: 28px;
   line-height: 35px;
   color: #7519FF;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-grid {
+.o-section-informacion-personal .o-div-card-info .o-div-informacion-personal .o-span-grid {
   padding-bottom: 2rem;
   font-size: 28px;
   line-height: 35px;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-lugar-nacimiento {
+.o-section-informacion-personal .o-div-card-info .o-div-informacion-personal .o-span-lugar-nacimiento {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
@@ -215,7 +215,7 @@ body {
   line-height: 35px;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-redes {
+.o-section-informacion-personal .o-div-card-info .o-div-redes {
   width: 100%;
   padding: 4rem 1rem 2rem 0;
   display: -webkit-box;
@@ -226,7 +226,7 @@ body {
           justify-content: flex-end;
 }
 
-.o-section-informacion-personal .o-div-card .o-div-redes img {
+.o-section-informacion-personal .o-div-card-info .o-div-redes img {
   width: 2.5rem;
   height: 2.5rem;
   margin-left: 1rem;
@@ -234,8 +234,115 @@ body {
           filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
 }
 
-.o-section-informacion-personal .o-div-card .o-div-redes img:hover {
+.o-section-informacion-personal .o-div-card-info .o-div-redes img:hover {
   filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
   -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
+}
+
+.o-section-habilidades {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.o-section-habilidades .o-div-card-habilidades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  height: 30rem;
+  background: #EAEBF3;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  font-weight: 100;
+  border-radius: 1rem;
+  padding: 5rem 2rem;
+}
+
+.o-section-habilidades .o-div-habilidades {
+  width: 48%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.o-section-habilidades .o-h1-titulo {
+  font-size: 35px;
+  line-height: 41px;
+  margin: 0;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.o-section-habilidades .o-span-habilidad {
+  color: #7519FF;
+  margin: 1rem 0 0 2rem;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.o-section-habilidades .o-div-barra-progreso {
+  width: 90%;
+  margin: 1rem 0 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #EAEBF3;
+  border-radius: 3rem;
+  padding: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+}
+
+.o-section-habilidades .o-div-barra-progreso::before {
+  content: '';
+  position: relative;
+  width: 70%;
+  border-radius: 2rem;
+  -webkit-box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+}
+
+.o-section-habilidades .o-div-barra-progreso span {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso::before {
+  background-color: #4700B3;
+}
+
+.o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso span {
+  color: #4700B3;
+}
+
+.o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso::before {
+  background-color: #7519FF;
+}
+
+.o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso span {
+  color: #7519FF;
 }
 /*# sourceMappingURL=index.css.map */

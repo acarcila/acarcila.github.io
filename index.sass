@@ -121,7 +121,7 @@ body
     justify-content: center
     align-items: center
 
-    .o-div-card
+    .o-div-card-info
         display: flex  
         flex-direction: column
         background: #EAEBF3
@@ -165,3 +165,93 @@ body
             img:hover
                 filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba($darkPurple, 0.4)) drop-shadow(3px 3px 10px rgba($darkPurple, 0.4))
                 -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba($darkPurple, 0.4)) drop-shadow(3px 3px 10px rgba($darkPurple, 0.4))
+
+.o-section-habilidades
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .o-div-card-habilidades
+        display: flex
+        justify-content: space-between
+        width: 70%
+        height: 30rem
+        background: #EAEBF3
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2)
+        font-weight: 100
+        border-radius: 1rem
+        padding: 5rem 2rem
+
+    .o-div-habilidades
+        width: 48%
+        height: 100%
+        display: flex
+        flex-direction: column
+        position: relative
+        justify-content: center
+
+    .o-h1-titulo
+        font-size: 35px
+        line-height: 41px
+        margin: 0
+        font-weight: 100
+        margin-bottom: 1rem
+
+    .o-span-habilidad
+        color: $lightPurple
+        margin: 1rem 0 0 2rem
+        font-size: 30px
+        line-height: 35px
+
+    .o-div-barra-progreso
+        width: 90%
+        margin: 1rem 0 0 2rem
+        display: flex
+        background-color: $background
+        border-radius: 3rem
+        padding: 0.2rem
+        position: relative
+        overflow: hidden
+        box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2)
+
+        &::before
+            content: ''
+            position: relative
+            width: 70%
+            border-radius: 2rem
+            box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2)
+
+        span
+            position: absolute
+            right: 0
+            margin-right: 1rem
+
+        // &::before
+            //     content: attr(data-title)
+            //     position : absolute
+            //     z-index: 2
+            //     overflow: hidden
+            //     white-space: nowrap
+            //     color: #00cdb2
+            //     right: 0
+
+    .o-habilidades-no-blandas
+
+        .o-div-barra-progreso
+            
+            &::before
+                background-color: $darkPurple
+            
+            span
+                color: $darkPurple
+
+    .o-habilidades-blandas
+
+        .o-div-barra-progreso
+            
+            &::before
+                background-color: $lightPurple
+
+            span
+                color: $lightPurple
