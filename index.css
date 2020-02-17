@@ -120,6 +120,14 @@ body {
   scroll-snap-align: start;
 }
 
+.o-h1-titulo {
+  font-size: 35px;
+  line-height: 41px;
+  margin: 0;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
 .o-section-inicio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,14 +293,6 @@ body {
           justify-content: center;
 }
 
-.o-section-habilidades .o-h1-titulo {
-  font-size: 35px;
-  line-height: 41px;
-  margin: 0;
-  font-weight: 100;
-  margin-bottom: 1rem;
-}
-
 .o-section-habilidades .o-span-habilidad {
   color: #7519FF;
   margin: 1rem 0 0 2rem;
@@ -344,5 +344,104 @@ body {
 
 .o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso span {
   color: #7519FF;
+}
+
+.o-section-educacion {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.o-section-educacion .o-div-card-educacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  height: 30rem;
+  background: #EAEBF3;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  font-weight: 100;
+  border-radius: 1rem;
+  padding: 3rem 1rem 3rem 3rem;
+}
+
+.o-section-educacion .o-div-elemento-educacion {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  margin-left: 4rem;
+}
+
+.o-section-educacion .o-h1-institucion {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  margin: 2rem 0 0 0;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 100;
+}
+
+.o-section-educacion .o-span-grid-titulo {
+  font-size: 28px;
+  line-height: 35px;
+  color: #4700B3;
+  padding: 1rem 4rem;
+}
+
+.o-section-educacion .o-span-grid {
+  font-size: 28px;
+  line-height: 35px;
+  justify-self: flex-end;
+  text-align: right;
+  padding: 1rem 4rem;
+}
+
+.o-section-educacion .o-span-grid span {
+  color: #7519FF;
+}
+
+.o-section-expreiencia {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.o-section-expreiencia .o-div-card-experiencia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  height: 30rem;
+  background: #EAEBF3;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  font-weight: 100;
+  border-radius: 1rem;
+  padding: 3rem 1rem 3rem 3rem;
 }
 /*# sourceMappingURL=index.css.map */

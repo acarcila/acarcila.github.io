@@ -90,6 +90,13 @@ body
         height: 100vh
         scroll-snap-align: start
 
+.o-h1-titulo
+    font-size: 35px
+    line-height: 41px
+    margin: 0
+    font-weight: 100
+    margin-bottom: 1rem
+
 .o-section-inicio
     display: flex
     flex-direction: column
@@ -191,13 +198,6 @@ body
         position: relative
         justify-content: center
 
-    .o-h1-titulo
-        font-size: 35px
-        line-height: 41px
-        margin: 0
-        font-weight: 100
-        margin-bottom: 1rem
-
     .o-span-habilidad
         color: $lightPurple
         margin: 1rem 0 0 2rem
@@ -255,3 +255,67 @@ body
 
             span
                 color: $lightPurple
+
+.o-section-educacion
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .o-div-card-educacion
+        display: flex
+        flex-direction: column
+        width: 70%
+        height: 30rem
+        background: #EAEBF3
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2)
+        font-weight: 100
+        border-radius: 1rem
+        padding: 3rem 1rem 3rem 3rem
+
+    .o-div-lista-educacion
+
+    .o-div-elemento-educacion
+        display: grid
+        grid-template-columns: 40% 60%
+        margin-left: 4rem
+
+    .o-h1-institucion
+        grid-column: 1 / span 2
+        margin: 2rem 0 0 0
+        font-size: 28px
+        line-height: 35px
+        font-weight: 100
+
+    .o-span-grid-titulo
+        font-size: 28px
+        line-height: 35px
+        color: $darkPurple
+        padding: 1rem 4rem
+
+    .o-span-grid
+        font-size: 28px
+        line-height: 35px
+        justify-self: flex-end
+        text-align: right
+        padding: 1rem 4rem
+
+        span
+            color: $lightPurple
+
+.o-section-expreiencia
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .o-div-card-experiencia
+        display: flex
+        flex-direction: column
+        width: 70%
+        height: 30rem
+        background: #EAEBF3
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2)
+        font-weight: 100
+        border-radius: 1rem
+        padding: 3rem 1rem 3rem 3rem
