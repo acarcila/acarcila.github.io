@@ -4,10 +4,12 @@ html {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
 body {
-  background-color: blue;
+  background-color: #EAEBF3;
   margin: 0;
 }
 
@@ -40,28 +42,35 @@ body {
   padding-right: 10px;
 }
 
-.o-div-nombre h1::before {
-  content: 'A';
-  color: white;
+.o-div-nombre h1 span {
+  color: #7519FF;
 }
 
 .o-section-menu-lateral {
-  padding-left: 60px;
-  padding-top: 130px;
+  padding-left: 2rem;
+  padding-top: 5rem;
   position: fixed;
 }
 
 .o-section-menu-lateral .o-boton-lateral {
   position: relative;
-  padding: 8px;
+  margin: 0.5rem;
+  background-color: #EAEBF3;
   overflow: hidden;
   z-index: 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
 }
 
 .o-section-menu-lateral .o-boton-lateral p {
-  margin: 0;
+  margin: 10px 33px 10px 17px;
   color: black;
   position: relative;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 16px;
 }
 
 .o-section-menu-lateral .o-boton-lateral::before {
@@ -119,21 +128,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .o-section-inicio .o-div-saludo {
-  width: 480px;
+  max-width: 36rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 20vh 0 0;
-  font-size: 20px;
+  font-size: 1.2rem;
+  padding-right: 9%;
+}
+
+.o-section-inicio .o-div-saludo span {
+  color: #7519FF;
 }
 
 .o-section-inicio .o-h1-nombre {
-  margin: 20vh 0 0;
-  width: 400px;
-  color: white;
-  font-size: 120px;
+  max-width: 400px;
+  margin: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #7519FF;
+  text-shadow: -3px -3px 10px rgba(117, 25, 255, 0.4), 3px 3px 10px rgba(117, 25, 255, 0.4);
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  font-weight: 100;
+  padding: 0 0 3rem 10%;
 }
 
 .o-section-informacion-personal {
@@ -141,10 +163,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -153,24 +171,71 @@ body {
           align-items: center;
 }
 
-.o-div-informacion-personal {
+.o-section-informacion-personal .o-div-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #EAEBF3;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  padding: 69px 69px 0 69px;
+  font-weight: 100;
+}
+
+.o-section-informacion-personal .o-div-card .o-div-informacion-personal {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 150px;
-      grid-template-columns: 200px 150px;
+  -ms-grid-columns: 15rem 25rem;
+      grid-template-columns: 15rem 25rem;
 }
 
-.o-div-informacion-personal .o-span-grid-titulo {
-  color: red;
+.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-grid-titulo {
+  padding-bottom: 3rem;
+  font-size: 28px;
+  line-height: 35px;
+  color: #7519FF;
 }
 
-.o-div-informacion-personal .o-span-grid {
-  color: green;
+.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-grid {
+  padding-bottom: 2rem;
+  font-size: 28px;
+  line-height: 35px;
 }
 
-.o-div-informacion-personal .o-span-lugar-nacimiento {
+.o-section-informacion-personal .o-div-card .o-div-informacion-personal .o-span-lugar-nacimiento {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
+  padding-left: 6rem;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.o-section-informacion-personal .o-div-card .o-div-redes {
+  width: 100%;
+  padding: 4rem 1rem 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.o-section-informacion-personal .o-div-card .o-div-redes img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  -webkit-filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
+          filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
+}
+
+.o-section-informacion-personal .o-div-card .o-div-redes img:hover {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
+  -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
 }
 /*# sourceMappingURL=index.css.map */
