@@ -1,5 +1,4 @@
 html {
-  cursor: url(Cursor.svg) 50 50, auto;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -11,9 +10,19 @@ html {
 body {
   background-color: #EAEBF3;
   margin: 0;
+  width: 100vw;
 }
 
-.section-all {
+.o-section-all {
+  width: 100%;
+}
+
+.o-section-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: #EAEBF3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,20 +30,41 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+  border-radius: 0 3rem 3rem 0;
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+}
+
+.o-div-picture {
+  background: #EAEBF3;
+  padding: 0.4rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+}
+
+.o-div-picture .o-div-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
 .o-div-nombre {
-  position: fixed;
-  top: 0;
-  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: 10px;
-  margin-right: 8px;
 }
 
 .o-div-nombre h1 {
@@ -47,9 +77,8 @@ body {
 }
 
 .o-section-menu-lateral {
-  padding-left: 2rem;
-  padding-top: 5rem;
-  position: fixed;
+  padding: 4rem 0;
+  width: 95%;
 }
 
 .o-section-menu-lateral .o-boton-lateral {
@@ -58,47 +87,55 @@ body {
   background-color: #EAEBF3;
   overflow: hidden;
   z-index: 2px;
-  border-radius: 5px;
-  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 0.7rem;
 }
 
 .o-section-menu-lateral .o-boton-lateral p {
   margin: 10px 33px 10px 17px;
   color: black;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 100;
   line-height: 16px;
 }
 
-.o-section-menu-lateral .o-boton-lateral::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 50%;
-  top: 50%;
-  left: 100%;
-  background-color: red;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
 .o-section-menu-lateral .o-boton-lateral:hover {
-  cursor: none;
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
 }
 
-.o-section-menu-lateral .o-boton-lateral:hover:before {
-  width: 250%;
-  height: 250%;
+.o-section-menu-lateral .o-boton-lateral:active {
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.o-div-redes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: flex-end;
+}
+
+.o-div-redes img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+  -webkit-filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
+          filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
+}
+
+.o-div-redes img:hover {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
+  -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
 }
 
 .o-section-contenido {
-  padding-left: 260px;
+  padding-left: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,8 +195,7 @@ body {
   margin: 0;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  color: #7519FF;
-  text-shadow: -3px -3px 10px rgba(117, 25, 255, 0.4), 3px 3px 10px rgba(117, 25, 255, 0.4);
+  color: black;
   font-size: 4.5rem;
   line-height: 5.5rem;
   font-weight: 100;
@@ -188,8 +224,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #EAEBF3;
-  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   padding: 69px 69px 0 69px;
   font-weight: 100;
 }
@@ -234,19 +270,6 @@ body {
           justify-content: flex-end;
 }
 
-.o-section-informacion-personal .o-div-card-info .o-div-redes img {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: 1rem;
-  -webkit-filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
-          filter: brightness(0) saturate(100%) invert(74%) sepia(40%) saturate(2421%) hue-rotate(194deg) brightness(101%) contrast(91%);
-}
-
-.o-section-informacion-personal .o-div-card-info .o-div-redes img:hover {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
-  -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba(71, 0, 179, 0.4)) drop-shadow(3px 3px 10px rgba(71, 0, 179, 0.4));
-}
-
 .o-section-habilidades {
   width: 100%;
   display: -webkit-box;
@@ -268,17 +291,15 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 70%;
-  height: 30rem;
   background: #EAEBF3;
-  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   font-weight: 100;
   border-radius: 1rem;
-  padding: 5rem 2rem;
 }
 
 .o-section-habilidades .o-div-habilidades {
-  width: 48%;
+  width: 50%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,8 +332,8 @@ body {
   padding: 0.2rem;
   position: relative;
   overflow: hidden;
-  -webkit-box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
 .o-section-habilidades .o-div-barra-progreso::before {
@@ -320,8 +341,8 @@ body {
   position: relative;
   width: 70%;
   border-radius: 2rem;
-  -webkit-box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
 .o-section-habilidades .o-div-barra-progreso span {
@@ -330,12 +351,23 @@ body {
   margin-right: 1rem;
 }
 
+.o-section-habilidades .o-habilidades-no-blandas {
+  padding: 5rem 1rem 5rem 2rem;
+}
+
 .o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso::before {
   background-color: #4700B3;
 }
 
 .o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso span {
   color: #4700B3;
+}
+
+.o-section-habilidades .o-habilidades-blandas {
+  padding: 5rem 2rem 5rem 1rem;
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+  border-radius: 3rem 1rem 1rem 3rem;
 }
 
 .o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso::before {
@@ -369,8 +401,8 @@ body {
           flex-direction: column;
   width: 70%;
   background: #EAEBF3;
-  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   font-weight: 100;
   border-radius: 1rem;
   padding: 3rem 1rem 3rem 3rem;
@@ -437,8 +469,8 @@ body {
   width: 70%;
   height: 30rem;
   background: #EAEBF3;
-  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   font-weight: 100;
   border-radius: 1rem;
   padding: 3rem 1rem 3rem 3rem;
