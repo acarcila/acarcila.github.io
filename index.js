@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var edadAnios = calcularEdad(timestampNacimiento);
 
     elementEdad.textContent = edadAnios;
-
-    myFunction();
 });
 
 calcularEdad = (timestampNacimiento) => {
