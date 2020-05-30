@@ -7,8 +7,6 @@ $internalShadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(
 
 html
     overflow-y: scroll
-    scroll-snap-type: y mandatory 
-    scroll-snap-stop: always
     font-family: 'Roboto', sans-serif
     font-weight: 100
 
@@ -70,6 +68,7 @@ body
         overflow: hidden
         z-index: 2px
         border-radius: 0.7rem
+        cursor: pointer
 
         p
             margin: 10px 33px 10px 17px
@@ -84,6 +83,12 @@ body
         box-shadow: $externalShadow
 
     .o-boton-lateral:active
+        box-shadow: $internalShadow
+
+    .o-boton-lateral:focus
+        box-shadow: $internalShadow
+
+    .selected
         box-shadow: $internalShadow
 
 .o-div-redes
@@ -234,14 +239,18 @@ body
         &::before
             content: ''
             position: relative
-            width: 70%
+            width: var(--percentage)
             border-radius: 2rem
             box-shadow: $internalShadow
 
         span
+            content: attr(data-title)
             position: absolute
             right: 0
             margin-right: 1rem
+            mix-blend-mode: difference
+            font-weight: bold
+            filter: invert(50%)
 
         // &::before
             //     content: attr(data-title)
@@ -261,7 +270,7 @@ body
                 background-color: $darkPurple
             
             span
-                color: $darkPurple
+                color: $lightPurple
 
     .o-habilidades-blandas
         padding: 5rem 2rem 5rem 1rem
@@ -274,7 +283,7 @@ body
                 background-color: $lightPurple
 
             span
-                color: $lightPurple
+                color: $darkPurple
 
 .o-section-educacion
     width: 100%

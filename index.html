@@ -21,7 +21,7 @@
     <title>Andrés Camilo Arcila</title>
 </head>
 
-<body>
+<body onclick="myFunction()">
     <section class="o-section-all">
         <section class="o-section-sidebar">
             <div class="o-div-nombre">
@@ -32,30 +32,36 @@
                 <div class="o-div-img" style="background-image: url(FotoPerfil.jpg)"></div>
             </div>
             <section class="o-section-menu-lateral">
-                <div class="o-boton-lateral">
+                <div class="o-boton-lateral" id="botonInicio" onclick="goToSection('inicio', this)">
                     <p>Inicio</p>
                 </div>
-                <div class="o-boton-lateral">
+                <div class="o-boton-lateral" id="botonInformacionPersonal" onclick="goToSection('informacionPersonal', this)">
                     <p>Información personal</p>
                 </div>
-                <div class="o-boton-lateral">
+                <div class="o-boton-lateral" id="botonHabilidades" onclick="goToSection('habilidades', this)">
                     <p>Habilidades</p>
                 </div>
-                <div class="o-boton-lateral">
+                <div class="o-boton-lateral" id="botonEducacion" onclick="goToSection('educacion', this)">
                     <p>Educación</p>
                 </div>
-                <div class="o-boton-lateral">
+                <div class="o-boton-lateral" id="botonExperiencia" onclick="goToSection('experiencia', this)">
                     <p>Experiencia</p>
                 </div>
             </section>
             <div class="o-div-redes">
-                <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg" alt="">
-                <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="">
-                <img src="https://image.flaticon.com/icons/svg/561/561188.svg" alt="">
+                <a href="https://github.com/acarcila" target="_blank">
+                    <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/andr%C3%A9s-camilo-arcila-ortiz-a97896175/" target="_blank">
+                    <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="">
+                </a>
+                <a href="mailto:acarcila98@gmail.com" target="_blank">
+                    <img src="https://image.flaticon.com/icons/svg/561/561188.svg" alt="">
+                </a>
             </div>
         </section>
         <section class="o-section-contenido">
-            <section class="o-section-inicio">
+            <section class="o-section-inicio" id="inicio">
                 <div class="o-div-saludo">
                     <p class="o-p-saludo">
                         Me centro en la creación de valor en
@@ -67,7 +73,7 @@
                 </div>
                 <h1 class="o-h1-nombre">Andrés Arcila</h1>
             </section>
-            <section class="o-section-informacion-personal">
+            <section class="o-section-informacion-personal" id="informacionPersonal">
                 <div class="o-div-card-info">
                     <div class="o-div-informacion-personal">
                         <span class="o-span-grid-titulo">Celular</span><span class="o-span-grid">3016458817</span>
@@ -83,73 +89,73 @@
                     </div>
                 </div>
             </section>
-            <section class="o-section-habilidades">
+            <section class="o-section-habilidades" id="habilidades">
                 <div class="o-div-card-habilidades">
                     <div class="o-div-habilidades o-habilidades-no-blandas">
                         <h1 class="o-h1-titulo">Habilidades</h1>
                         <span class="o-span-habilidad">Git</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span>70%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">Java</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 50%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span>50%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">JavaScript</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
                             <span data-title="70%">70%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">Unity</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span data-title="80%">80%</span>
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="o-div-habilidades o-habilidades-blandas">
                         <h1 class="o-h1-titulo">Habilidades blandas</h1>
                         <span class="o-span-habilidad">Facilidad de adaptación</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
                             <span data-title="70%">70%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">Creatividad</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 90%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span>90%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">Organización</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span data-title="80%">80%</span>
                             <!-- </div> -->
                         </div>
                         <span class="o-span-habilidad">Pensamiento crítico</span>
-                        <div class="o-div-barra-progreso">
+                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
                             &nbsp
                             <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
+                            <span data-content="80%">80%</span>
                             <!-- </div> -->
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="o-section-educacion">
+            <section class="o-section-educacion" id="educacion">
                 <div class="o-div-card-educacion">
                     <h1 class="o-h1-titulo">Educación</h1>
                     <div class="o-div-lista-educacion">
@@ -170,7 +176,7 @@
                     </div>
                 </div>
             </section>
-            <section class="o-section-expreiencia">
+            <section class="o-section-expreiencia" id="experiencia">
                 <div class="o-div-card-experiencia">
                     <h1 class="o-h1-titulo">Experiencia laboral</h1>
                     <div class="o-div-timeline">

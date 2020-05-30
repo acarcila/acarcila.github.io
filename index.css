@@ -1,8 +1,5 @@
 html {
   overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
@@ -87,6 +84,7 @@ body {
   overflow: hidden;
   z-index: 2px;
   border-radius: 0.7rem;
+  cursor: pointer;
 }
 
 .o-section-menu-lateral .o-boton-lateral p {
@@ -105,6 +103,16 @@ body {
 }
 
 .o-section-menu-lateral .o-boton-lateral:active {
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.o-section-menu-lateral .o-boton-lateral:focus {
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.o-section-menu-lateral .selected {
   -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
           box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
@@ -337,16 +345,21 @@ body {
 .o-section-habilidades .o-div-barra-progreso::before {
   content: '';
   position: relative;
-  width: 70%;
+  width: var(--percentage);
   border-radius: 2rem;
   -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
           box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
 .o-section-habilidades .o-div-barra-progreso span {
+  content: attr(data-title);
   position: absolute;
   right: 0;
   margin-right: 1rem;
+  mix-blend-mode: difference;
+  font-weight: bold;
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
 }
 
 .o-section-habilidades .o-habilidades-no-blandas {
@@ -358,7 +371,7 @@ body {
 }
 
 .o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso span {
-  color: #4700B3;
+  color: #7519FF;
 }
 
 .o-section-habilidades .o-habilidades-blandas {
@@ -373,7 +386,7 @@ body {
 }
 
 .o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso span {
-  color: #7519FF;
+  color: #4700B3;
 }
 
 .o-section-educacion {
