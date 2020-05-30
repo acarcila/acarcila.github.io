@@ -21,5 +21,4 @@ goToSection = (sectionID, boton) => {
     var botonID = boton.id;
     document.getElementById(sectionID).scrollIntoView();
     document.getElementById(botonID).classList.add("selected");
-    console.log(document.activeElement);
 }
