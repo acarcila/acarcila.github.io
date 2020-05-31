@@ -88,7 +88,7 @@ body
     .o-boton-lateral:focus
         box-shadow: $internalShadow
 
-    .selected
+    .active
         box-shadow: $internalShadow
 
 .o-div-redes
@@ -160,6 +160,9 @@ body
     align-items: center
 
     .o-div-card-info
+        box-sizing: border-box
+        max-width: 100%
+        width: 40rem
         display: flex  
         flex-direction: column
         background: #EAEBF3
@@ -168,8 +171,14 @@ body
         font-weight: 100
 
         .o-div-informacion-personal
-            display: grid
+            display: flex
+            flex-direction: column
             grid-template-columns: 15rem 25rem
+
+            .o-info
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
 
             .o-span-grid-titulo
                 padding-bottom: 3rem

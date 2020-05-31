@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139631233-2"></script>
@@ -31,20 +32,20 @@
             <div class="o-div-picture">
                 <div class="o-div-img" style="background-image: url(FotoPerfil.jpg)"></div>
             </div>
-            <section class="o-section-menu-lateral">
-                <div class="o-boton-lateral" id="botonInicio" onclick="goToSection('inicio', this)">
+            <section class="o-section-menu-lateral" id="menu">
+                <div class="o-boton-lateral active" id="botonInicio" href="#inicio">
                     <p>Inicio</p>
                 </div>
-                <div class="o-boton-lateral" id="botonInformacionPersonal" onclick="goToSection('informacionPersonal', this)">
+                <div class="o-boton-lateral" id="botonInformacionPersonal" href="#informacionPersonal">
                     <p>Información personal</p>
                 </div>
-                <div class="o-boton-lateral" id="botonHabilidades" onclick="goToSection('habilidades', this)">
+                <div class="o-boton-lateral" id="botonHabilidades" href="#habilidades">
                     <p>Habilidades</p>
                 </div>
-                <div class="o-boton-lateral" id="botonEducacion" onclick="goToSection('educacion', this)">
+                <div class="o-boton-lateral" id="botonEducacion" href="#educacion">
                     <p>Educación</p>
                 </div>
-                <div class="o-boton-lateral" id="botonExperiencia" onclick="goToSection('experiencia', this)">
+                <div class="o-boton-lateral" id="botonExperiencia" href="#experiencia">
                     <p>Experiencia</p>
                 </div>
             </section>
@@ -76,11 +77,10 @@
             <section class="o-section-informacion-personal" id="informacionPersonal">
                 <div class="o-div-card-info">
                     <div class="o-div-informacion-personal">
-                        <span class="o-span-grid-titulo">Celular</span><span class="o-span-grid">3016458817</span>
-                        <span class="o-span-grid-titulo">Correo</span><span
-                            class="o-span-grid">acarcila98@gmail.com</span>
-                        <span class="o-span-grid-titulo">Edad</span><span id="edad" class="o-span-grid">21</span>
-                        <span class="o-span-lugar-nacimiento">Cali - Colombia</span>
+                        <div class="o-info"><span class="o-span-grid-titulo">Celular</span><span class="o-span-grid">3016458817</span></div>
+                        <div class="o-info"><span class="o-span-grid-titulo">Correo</span><span class="o-span-grid">acarcila98@gmail.com</span></div>
+                        <div class="o-info"><span class="o-span-grid-titulo">Edad</span><span id="edad" class="o-span-grid">21</span></div>
+                        <div class="o-info"><span class="o-span-lugar-nacimiento">Cali - Colombia</span></div>
                     </div>
                     <div class="o-div-redes">
                         <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg" alt="">

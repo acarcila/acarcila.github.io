@@ -112,7 +112,7 @@ body {
           box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
-.o-section-menu-lateral .selected {
+.o-section-menu-lateral .active {
   -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
           box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
 }
@@ -222,6 +222,10 @@ body {
 }
 
 .o-section-informacion-personal .o-div-card-info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  width: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,10 +241,26 @@ body {
 }
 
 .o-section-informacion-personal .o-div-card-info .o-div-informacion-personal {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-grid-columns: 15rem 25rem;
       grid-template-columns: 15rem 25rem;
+}
+
+.o-section-informacion-personal .o-div-card-info .o-div-informacion-personal .o-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .o-section-informacion-personal .o-div-card-info .o-div-informacion-personal .o-span-grid-titulo {
