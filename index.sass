@@ -9,16 +9,21 @@ html
     overflow-y: scroll
     font-family: 'Roboto', sans-serif
     font-weight: 100
+    height: 100vh
+    width: 100vw
+    overflow: hidden
 
 body
     background-color: $background
     margin: 0
+    height: 100%
     
 .o-section-all 
     width: 100%
+    height: 100%
+    display: flex
 
 .o-section-sidebar
-    position: fixed
     left: 0
     top: 0
     height: 100vh
@@ -29,7 +34,7 @@ body
     width: 15rem
     border-radius: 0 3rem 3rem 0
     box-shadow: $externalShadow
-    // box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.2), inset -6px -6px 10px rgba(255, 255, 255, 0.2)
+    z-index: 1
 
 .o-div-picture
     background: $background
@@ -108,16 +113,15 @@ body
         -webkit-filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7403%) hue-rotate(269deg) brightness(67%) contrast(117%) drop-shadow(-3px -3px 10px rgba($darkPurple, 0.4)) drop-shadow(3px 3px 10px rgba($darkPurple, 0.4))
 
 .o-section-contenido
-    padding-left: 15rem
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
+    width: calc(100% - 15rem)
     align-content: center
     justify-content: center
+    overflow-y: scroll
 
     section
-        height: 100vh
+        min-height: 100vh
         scroll-snap-align: start
+        margin: 1rem 0
 
 .o-h1-titulo
     font-size: 35px
@@ -134,9 +138,7 @@ body
 
     .o-div-saludo
         max-width: 36rem
-        // align-self: flex-end
         font-size: 1.2rem
-        // padding-right: 9%
         text-align: center
 
         span
@@ -145,13 +147,11 @@ body
     .o-h1-nombre
         max-width: 400px
         margin: 0
-        // align-self: flex-start
         color: black
         font-size: 4.5rem
         line-height: 5.5rem
         font-weight: 100
         text-align: center
-        // padding: 0 0 3rem 10%
 
 .o-section-informacion-personal
     width: 100%
@@ -169,6 +169,7 @@ body
         box-shadow: $externalShadow
         padding: 69px 69px 0 69px
         font-weight: 100
+        border-radius: 1rem
 
         .o-div-informacion-personal
             display: flex
@@ -219,6 +220,7 @@ body
         box-shadow: $externalShadow
         font-weight: 100
         border-radius: 1rem
+        overflow: hidden
 
     .o-div-habilidades
         width: 50%
@@ -261,17 +263,8 @@ body
             font-weight: bold
             filter: invert(50%)
 
-        // &::before
-            //     content: attr(data-title)
-            //     position : absolute
-            //     z-index: 2
-            //     overflow: hidden
-            //     white-space: nowrap
-            //     color: #00cdb2
-            //     right: 0
-
     .o-habilidades-no-blandas
-        padding: 5rem 1rem 5rem 2rem
+        padding: 5rem 2rem 5rem 1rem
 
         .o-div-barra-progreso
             
@@ -284,7 +277,7 @@ body
     .o-habilidades-blandas
         padding: 5rem 2rem 5rem 1rem
         box-shadow: $internalShadow
-        border-radius: 3rem 1rem 1rem 3rem
+        border-radius: 3rem 0 0 3rem
 
         .o-div-barra-progreso
             
@@ -392,16 +385,6 @@ body
         z-index: 1
         background-color: $darkPurple
 
-    // .o-span-grid-fecha::before
-    //     content: ''
-    //     position: absolute
-    //     left: calc(-1rem + 11px)
-    //     transform: translate(0, 5%)
-    //     z-index: 1
-    //     width: 1px
-    //     height: 50%
-    //     background-color: red
-
     .o-h1-institucion
         grid-column: 2
         grid-row: 1
@@ -425,3 +408,53 @@ body
 
         span
             color: $darkPurple
+
+
+@media only screen and (max-width: 1000px)
+
+    .o-section-habilidades
+    
+        .o-div-card-habilidades
+            flex-direction: column
+
+        .o-div-habilidades
+            width: 100%
+            box-sizing: border-box
+
+        .o-span-habilidad
+
+        .o-habilidades-blandas
+            border-radius: 3rem 3rem 0 0
+
+            .o-div-barra-progreso
+
+        .o-habilidades-blandas
+
+@media only screen and (max-width:  1000px)
+
+    .o-section-sidebar
+        display: none
+
+    .o-section-contenido
+        width: 100%
+
+    .o-section-habilidades
+
+        .o-div-card-habilidades
+            width: 100%
+
+    .o-section-educacion
+
+        .o-div-elemento-educacion
+            margin: 0
+
+        .o-div-card-educacion
+            width: 100%
+
+        .o-span-grid-titulo
+            padding: 0
+
+    .o-section-expreiencia
+
+        .o-div-card-experiencia
+            width: 100%

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     var lastId,
         topMenu = $("#menu"),
-        topMenuHeight = topMenu.outerHeight(),
+        topMenuHeight = 0,
         // All list items
         menuItems = topMenu.find(".o-boton-lateral"),
         // Anchors corresponding to menu items
@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     menuItems.click(function (e) {
         var href = $(this).attr("href"),
-            offsetTop = href === "#inicio" ? 0 : $(href).offset().top;
-        $('html, body').stop().animate({
+            offsetTop = href === "#inicio" ? 0 : $(href).offset().top + $("#contenido").scrollTop();
+        // console.log(href, offsetTop);
+        $("#contenido").stop().animate({
             scrollTop: offsetTop
         }, 300);
         e.preventDefault();
@@ -33,14 +34,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
         return Math.floor(((timestampActual - timestampNacimiento) / (1000 * 60 * 60 * 24 * 365)))
     }
 
-    $(window).scroll(function () {
+    $("#contenido").scroll(function () {
         // Get container scroll position
         var fromTop = $(this).scrollTop() + topMenuHeight;
 
+        console.log("=> ", fromTop);
         // Get id of current scroll item
         var cur = scrollItems.map(function () {
-            if ($(this).offset().top < fromTop)
+            console.log($(this).offset().top + $("#contenido").scrollTop());
+            if ($(this).offset().top + $("#contenido").scrollTop() <= fromTop) {
                 return this;
+            }
         });
         // Get the id of the current element
         cur = cur[cur.length - 1];

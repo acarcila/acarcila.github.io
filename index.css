@@ -2,19 +2,26 @@ html {
   overflow-y: scroll;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 body {
   background-color: #EAEBF3;
   margin: 0;
+  height: 100%;
 }
 
 .o-section-all {
   width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .o-section-sidebar {
-  position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
@@ -33,6 +40,7 @@ body {
   border-radius: 0 3rem 3rem 0;
   -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
           box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
 
 .o-div-picture {
@@ -142,26 +150,19 @@ body {
 }
 
 .o-section-contenido {
-  padding-left: 15rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: calc(100% - 15rem);
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: scroll;
 }
 
 .o-section-contenido section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
+  margin: 1rem 0;
 }
 
 .o-h1-titulo {
@@ -238,6 +239,7 @@ body {
           box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   padding: 69px 69px 0 69px;
   font-weight: 100;
+  border-radius: 1rem;
 }
 
 .o-section-informacion-personal .o-div-card-info .o-div-informacion-personal {
@@ -322,6 +324,7 @@ body {
           box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), -3px -3px 4px rgba(255, 255, 255, 0.2);
   font-weight: 100;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .o-section-habilidades .o-div-habilidades {
@@ -383,7 +386,7 @@ body {
 }
 
 .o-section-habilidades .o-habilidades-no-blandas {
-  padding: 5rem 1rem 5rem 2rem;
+  padding: 5rem 2rem 5rem 1rem;
 }
 
 .o-section-habilidades .o-habilidades-no-blandas .o-div-barra-progreso::before {
@@ -398,7 +401,7 @@ body {
   padding: 5rem 2rem 5rem 1rem;
   -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
           box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 3px rgba(255, 255, 255, 0.2);
-  border-radius: 3rem 1rem 1rem 3rem;
+  border-radius: 3rem 0 0 3rem;
 }
 
 .o-section-habilidades .o-habilidades-blandas .o-div-barra-progreso::before {
@@ -585,5 +588,46 @@ body {
 
 .o-section-expreiencia .o-div-grid-descripcion span {
   color: #4700B3;
+}
+
+@media only screen and (max-width: 1000px) {
+  .o-section-habilidades .o-div-card-habilidades {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .o-section-habilidades .o-div-habilidades {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .o-section-habilidades .o-habilidades-blandas {
+    border-radius: 3rem 3rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .o-section-sidebar {
+    display: none;
+  }
+  .o-section-contenido {
+    width: 100%;
+  }
+  .o-section-habilidades .o-div-card-habilidades {
+    width: 100%;
+  }
+  .o-section-educacion .o-div-elemento-educacion {
+    margin: 0;
+  }
+  .o-section-educacion .o-div-card-educacion {
+    width: 100%;
+  }
+  .o-section-educacion .o-span-grid-titulo {
+    padding: 0;
+  }
+  .o-section-expreiencia .o-div-card-experiencia {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

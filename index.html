@@ -1,219 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139631233-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139631233-2"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-139631233-2');
+      gtag("config", "UA-139631233-2");
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Andrés Camilo Arcila</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="o-section-all">
-        <section class="o-section-sidebar">
-            <div class="o-div-nombre">
-                <h1 class="o-h1-nombre"><span>A</span>ndrés</h1>
-                <h1 class="o-h1-nombre"><span>A</span>rcila</h1>
+      <section class="o-section-sidebar">
+        <div class="o-div-nombre">
+          <h1 class="o-h1-nombre"><span>A</span>ndrés</h1>
+          <h1 class="o-h1-nombre"><span>A</span>rcila</h1>
+        </div>
+        <div class="o-div-picture">
+          <div
+            class="o-div-img"
+            style="background-image: url(FotoPerfil.jpg);"
+          ></div>
+        </div>
+        <section class="o-section-menu-lateral" id="menu">
+          <div class="o-boton-lateral active" id="botonInicio" href="#inicio">
+            <p>Inicio</p>
+          </div>
+          <div
+            class="o-boton-lateral"
+            id="botonInformacionPersonal"
+            href="#informacionPersonal"
+          >
+            <p>Información personal</p>
+          </div>
+          <div
+            class="o-boton-lateral"
+            id="botonHabilidades"
+            href="#habilidades"
+          >
+            <p>Habilidades</p>
+          </div>
+          <div class="o-boton-lateral" id="botonEducacion" href="#educacion">
+            <p>Educación</p>
+          </div>
+          <div
+            class="o-boton-lateral"
+            id="botonExperiencia"
+            href="#experiencia"
+          >
+            <p>Experiencia</p>
+          </div>
+        </section>
+        <div class="o-div-redes">
+          <a href="https://github.com/acarcila" target="_blank">
+            <img
+              src="https://image.flaticon.com/icons/svg/2111/2111432.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/andr%C3%A9s-camilo-arcila-ortiz-a97896175/"
+            target="_blank"
+          >
+            <img
+              src="https://image.flaticon.com/icons/svg/174/174857.svg"
+              alt=""
+            />
+          </a>
+          <a href="mailto:acarcila98@gmail.com" target="_blank">
+            <img
+              src="https://image.flaticon.com/icons/svg/561/561188.svg"
+              alt=""
+            />
+          </a>
+        </div>
+      </section>
+      <section class="o-section-contenido" id="contenido">
+        <section class="o-section-inicio" id="inicio">
+          <div class="o-div-saludo">
+            <p class="o-p-saludo">
+              Me centro en la creación de valor en las soluciones y productos,
+              teniendo siempre en cuenta al <span>usuario</span> en el proceso
+              de diseño. Además, Estoy enfocado en el desarrollo
+              <span>Back-end</span>.
+            </p>
+          </div>
+          <h1 class="o-h1-nombre">Andrés Arcila</h1>
+        </section>
+        <section
+          class="o-section-informacion-personal"
+          id="informacionPersonal"
+        >
+          <div class="o-div-card-info">
+            <div class="o-div-informacion-personal">
+              <div class="o-info">
+                <span class="o-span-grid-titulo">Celular</span
+                ><span class="o-span-grid">3016458817</span>
+              </div>
+              <div class="o-info">
+                <span class="o-span-grid-titulo">Correo</span
+                ><span class="o-span-grid">acarcila98@gmail.com</span>
+              </div>
+              <div class="o-info">
+                <span class="o-span-grid-titulo">Edad</span
+                ><span id="edad" class="o-span-grid">21</span>
+              </div>
+              <div class="o-info">
+                <span class="o-span-lugar-nacimiento">Cali - Colombia</span>
+              </div>
             </div>
-            <div class="o-div-picture">
-                <div class="o-div-img" style="background-image: url(FotoPerfil.jpg)"></div>
-            </div>
-            <section class="o-section-menu-lateral" id="menu">
-                <div class="o-boton-lateral active" id="botonInicio" href="#inicio">
-                    <p>Inicio</p>
-                </div>
-                <div class="o-boton-lateral" id="botonInformacionPersonal" href="#informacionPersonal">
-                    <p>Información personal</p>
-                </div>
-                <div class="o-boton-lateral" id="botonHabilidades" href="#habilidades">
-                    <p>Habilidades</p>
-                </div>
-                <div class="o-boton-lateral" id="botonEducacion" href="#educacion">
-                    <p>Educación</p>
-                </div>
-                <div class="o-boton-lateral" id="botonExperiencia" href="#experiencia">
-                    <p>Experiencia</p>
-                </div>
-            </section>
             <div class="o-div-redes">
-                <a href="https://github.com/acarcila" target="_blank">
-                    <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/andr%C3%A9s-camilo-arcila-ortiz-a97896175/" target="_blank">
-                    <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="">
-                </a>
-                <a href="mailto:acarcila98@gmail.com" target="_blank">
-                    <img src="https://image.flaticon.com/icons/svg/561/561188.svg" alt="">
-                </a>
+              <a href="https://github.com/acarcila" target="_blank">
+                <img
+                  src="https://image.flaticon.com/icons/svg/2111/2111432.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/andr%C3%A9s-camilo-arcila-ortiz-a97896175/"
+                target="_blank"
+              >
+                <img
+                  src="https://image.flaticon.com/icons/svg/174/174857.svg"
+                  alt=""
+                />
+              </a>
+              <a href="mailto:acarcila98@gmail.com" target="_blank">
+                <img
+                  src="https://image.flaticon.com/icons/svg/561/561188.svg"
+                  alt=""
+                />
+              </a>
             </div>
+          </div>
         </section>
-        <section class="o-section-contenido">
-            <section class="o-section-inicio" id="inicio">
-                <div class="o-div-saludo">
-                    <p class="o-p-saludo">
-                        Me centro en la creación de valor en
-                        las soluciones y productos, teniendo
-                        siempre en cuenta al <span>usuario</span> en el
-                        proceso de diseño. Además, Estoy
-                        enfocado en el desarrollo <span>Back-end</span>.
-                    </p>
-                </div>
-                <h1 class="o-h1-nombre">Andrés Arcila</h1>
-            </section>
-            <section class="o-section-informacion-personal" id="informacionPersonal">
-                <div class="o-div-card-info">
-                    <div class="o-div-informacion-personal">
-                        <div class="o-info"><span class="o-span-grid-titulo">Celular</span><span class="o-span-grid">3016458817</span></div>
-                        <div class="o-info"><span class="o-span-grid-titulo">Correo</span><span class="o-span-grid">acarcila98@gmail.com</span></div>
-                        <div class="o-info"><span class="o-span-grid-titulo">Edad</span><span id="edad" class="o-span-grid">21</span></div>
-                        <div class="o-info"><span class="o-span-lugar-nacimiento">Cali - Colombia</span></div>
-                    </div>
-                    <div class="o-div-redes">
-                        <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg" alt="">
-                        <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="">
-                        <img src="https://image.flaticon.com/icons/svg/561/561188.svg" alt="">
-                    </div>
-                </div>
-            </section>
-            <section class="o-section-habilidades" id="habilidades">
-                <div class="o-div-card-habilidades">
-                    <div class="o-div-habilidades o-habilidades-no-blandas">
-                        <h1 class="o-h1-titulo">Habilidades</h1>
-                        <span class="o-span-habilidad">Git</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span>70%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">Java</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 50%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span>50%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">JavaScript</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">Unity</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="80%">80%</span>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                    <div class="o-div-habilidades o-habilidades-blandas">
-                        <h1 class="o-h1-titulo">Habilidades blandas</h1>
-                        <span class="o-span-habilidad">Facilidad de adaptación</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 70%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="70%">70%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">Creatividad</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 90%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span>90%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">Organización</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-title="80%">80%</span>
-                            <!-- </div> -->
-                        </div>
-                        <span class="o-span-habilidad">Pensamiento crítico</span>
-                        <div class="o-div-barra-progreso" style="--percentage: 80%;">
-                            &nbsp
-                            <!-- <div class="o-div-progreso">&nbsp -->
-                            <span data-content="80%">80%</span>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="o-section-educacion" id="educacion">
-                <div class="o-div-card-educacion">
-                    <h1 class="o-h1-titulo">Educación</h1>
-                    <div class="o-div-lista-educacion">
-                        <div class="o-div-elemento-educacion">
-                            <h1 class="o-h1-institucion">Colegio Freinet</h1>
-                            <span class="o-span-grid-titulo">Título alcanzado:</span><span class="o-span-grid">Bachiller
-                                bilingüe</span>
-                            <span class="o-span-grid-titulo">Año de graduación:</span><span
-                                class="o-span-grid">2015</span>
-                        </div>
-                        <div class="o-div-elemento-educacion">
-                            <h1 class="o-h1-institucion">Universidad Autónoma de Occidente</h1>
-                            <span class="o-span-grid-titulo">Título alcanzado:</span><span class="o-span-grid">Ingeniero
-                                Multimedia en formación, décimo semestre</span>
-                            <span class="o-span-grid-titulo">Fecha de ingreso:</span><span
-                                class="o-span-grid">2015<span>/</span>03</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="o-section-expreiencia" id="experiencia">
-                <div class="o-div-card-experiencia">
-                    <h1 class="o-h1-titulo">Experiencia laboral</h1>
-                    <div class="o-div-timeline">
-                        <div class="o-div-elemento-experiencia">
-                            <span class="o-span-grid-fecha">2017-2018</span>
-                            <h1 class="o-h1-institucion">Universidad Autónoma de Occidente</h1>
-                            <span class="o-span-grid-rol">Monitor Expin MediaLab</span>
-                            <div class="o-div-grid-descripcion">
-                                <p>Desarrollo de experiencias interactivas en
-                                    <span>Unity</span> con tecnologías de retroalimentación
-                                    háptica (Programación en <span>c#</span>).
-                                </p>
-                                <p>Manejo de <span>arduino</span>.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="o-div-elemento-experiencia">
-                            <span class="o-span-grid-fecha">julio 2018</span>
-                            <h1 class="o-h1-institucion">Solutraffic Ingeniería S.A.S</h1>
-                            <span class="o-span-grid-rol">Desarrollador asistente</span>
-                            <div class="o-div-grid-descripcion">
-                                <p>Desarrollo de un programa en <span>java</span> para el funcionamiento de una plaqueta de potencia
-                                    para dos semáforos; uso de <span>java</span> en <span>raspberry</span>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
-                    perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <section class="o-section-habilidades" id="habilidades">
+          <div class="o-div-card-habilidades">
+            <div class="o-div-habilidades o-habilidades-no-blandas">
+              <h1 class="o-h1-titulo">Habilidades</h1>
+              <span class="o-span-habilidad">Git</span>
+              <div class="o-div-barra-progreso" style="--percentage: 70%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span>70%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">Java</span>
+              <div class="o-div-barra-progreso" style="--percentage: 50%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span>50%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">JavaScript</span>
+              <div class="o-div-barra-progreso" style="--percentage: 70%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span data-title="70%">70%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">Unity</span>
+              <div class="o-div-barra-progreso" style="--percentage: 80%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span data-title="80%">80%</span>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="o-div-habilidades o-habilidades-blandas">
+              <h1 class="o-h1-titulo">Habilidades blandas</h1>
+              <span class="o-span-habilidad">Facilidad de adaptación</span>
+              <div class="o-div-barra-progreso" style="--percentage: 70%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span data-title="70%">70%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">Creatividad</span>
+              <div class="o-div-barra-progreso" style="--percentage: 90%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span>90%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">Organización</span>
+              <div class="o-div-barra-progreso" style="--percentage: 80%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span data-title="80%">80%</span>
+                <!-- </div> -->
+              </div>
+              <span class="o-span-habilidad">Pensamiento crítico</span>
+              <div class="o-div-barra-progreso" style="--percentage: 80%;">
+                &nbsp
+                <!-- <div class="o-div-progreso">&nbsp -->
+                <span data-content="80%">80%</span>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
         </section>
+        <section class="o-section-educacion" id="educacion">
+          <div class="o-div-card-educacion">
+            <h1 class="o-h1-titulo">Educación</h1>
+            <div class="o-div-lista-educacion">
+              <div class="o-div-elemento-educacion">
+                <h1 class="o-h1-institucion">Colegio Freinet</h1>
+                <span class="o-span-grid-titulo">Título alcanzado:</span
+                ><span class="o-span-grid">Bachiller bilingüe</span>
+                <span class="o-span-grid-titulo">Año de graduación:</span
+                ><span class="o-span-grid">2015</span>
+              </div>
+              <div class="o-div-elemento-educacion">
+                <h1 class="o-h1-institucion">
+                  Universidad Autónoma de Occidente
+                </h1>
+                <span class="o-span-grid-titulo">Título alcanzado:</span
+                ><span class="o-span-grid"
+                  >Ingeniero Multimedia en formación, décimo semestre</span
+                >
+                <span class="o-span-grid-titulo">Fecha de ingreso:</span
+                ><span class="o-span-grid">2015<span>/</span>03</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="o-section-expreiencia" id="experiencia">
+          <div class="o-div-card-experiencia">
+            <h1 class="o-h1-titulo">Experiencia laboral</h1>
+            <div class="o-div-timeline">
+              <div class="o-div-elemento-experiencia">
+                <span class="o-span-grid-fecha">2017-2018</span>
+                <h1 class="o-h1-institucion">
+                  Universidad Autónoma de Occidente
+                </h1>
+                <span class="o-span-grid-rol">Monitor Expin MediaLab</span>
+                <div class="o-div-grid-descripcion">
+                  <p>
+                    Desarrollo de experiencias interactivas en
+                    <span>Unity</span> con tecnologías de retroalimentación
+                    háptica (Programación en <span>c#</span>).
+                  </p>
+                  <p>Manejo de <span>arduino</span>.</p>
+                </div>
+              </div>
+              <div class="o-div-elemento-experiencia">
+                <span class="o-span-grid-fecha">julio 2018</span>
+                <h1 class="o-h1-institucion">Solutraffic Ingeniería S.A.S</h1>
+                <span class="o-span-grid-rol">Desarrollador asistente</span>
+                <div class="o-div-grid-descripcion">
+                  <p>
+                    Desarrollo de un programa en <span>java</span> para el
+                    funcionamiento de una plaqueta de potencia para dos
+                    semáforos; uso de <span>java</span> en
+                    <span>raspberry</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+            >Pixel perfect</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+            >Freepik</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+            >Freepik</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </section>
     </section>
-</body>
-
+  </body>
 </html>
